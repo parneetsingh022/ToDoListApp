@@ -12,7 +12,7 @@ export default function AddCategory(){
 
     useEffect(() => {
         if (category && !/^[a-z0-9 ]+$/i.test(category)) {
-            setError("Only alphabets and numbers are allowed in name");
+            setError("Only alphabets and numbers are allowed in name!!");
         } else if (category.toLowerCase().trim() == "category") {
             setError("This category already exists!");
         } else {
