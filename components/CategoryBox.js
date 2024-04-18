@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import themeColors, {invertColor} from "../Colors";
 
 const CategoryBox = () => {
     return (
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         marginLeft: 20,
         marginRight: 20,
-        backgroundColor: '#fff',
+        backgroundColor: themeColors.backgroundSecondary,
         borderRadius: 10,
         padding: 20,
         shadowColor: "#000", // shadow color
@@ -39,10 +40,11 @@ const styles = StyleSheet.create({
         width: 80,
         height: 21,
     },
+    
     catogoryText: {
         marginTop: 10,
         marginLeft: 3,
-        color: 'black',
+        color: themeColors.primaryText,
         fontWeight: 'bold',
         fontSize: 16,
     },
@@ -52,11 +54,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     itemLeftText: {
-        backgroundColor: 'red',
+        backgroundColor: themeColors.red,
         padding: 3,
         width: 25,
-        borderRadius: 15, // Half of width/height
-        color: 'white',
+        borderRadius: 15,
+        color: invertColor(themeColors.primaryText),
         justifyContent: 'center', // Center content vertically
         alignItems: 'center', // Center content horizontally
         textAlign: 'center', // Center text

@@ -3,6 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import AddCategory from './components/AddCategory';
 import Header from './components/Header';
 import CategoryBox from './components/CategoryBox';
+import themeColors, {DARK_THEME} from './Colors';
+
+
 
 export default function App() {
   return (
@@ -10,14 +13,17 @@ export default function App() {
       <Header />
       <AddCategory />
       <CategoryBox />
-      <StatusBar style="auto" />
+      <StatusBar 
+        backgroundColor={themeColors.backgroundPrimary} 
+        barStyle={DARK_THEME ? "light-content" : "dark-content"}
+      />
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    backgroundColor: '#F8F7F7',
+    backgroundColor: themeColors.backgroundPrimary,
     marginTop: 30,
   },
 });

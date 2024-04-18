@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View,Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import themeColors from '../Colors';
 
 export default function AddCategory(){
     const [category, setCategory] = useState('');
@@ -26,6 +27,7 @@ export default function AddCategory(){
                 style={styles.inputBox}
                 placeholder="Create Category"
                 onChangeText={text => setCategory(text)}
+                placeholderTextColor={themeColors.secondaryText}
                 value={category}
                 maxLength={20}
             />
@@ -49,15 +51,16 @@ const styles = StyleSheet.create({
 
     inputBox:{ 
         height: 40, 
-        borderColor: '#dadada',
-        backgroundColor:'#dadada',
+        borderColor: themeColors.borderColor,
+        backgroundColor:themeColors.borderColor,
+        color:themeColors.secondaryText,
         borderRadius:10, 
         borderWidth: 1,
         padding:10
     },
     buttonContainer:{
         marginTop:8,
-        backgroundColor:"#098CF3",
+        backgroundColor:themeColors.themeBlue,
         padding:10,
         borderRadius:10,
         justifyContent:'center',

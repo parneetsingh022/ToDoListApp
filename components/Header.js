@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet } from "react-native"
+import themeColors from "../Colors"
 
 export default function Header(){
     return (
@@ -14,12 +15,12 @@ const styles = StyleSheet.create({
         marginRight:22,
         marginTop:20,
         borderBottomWidth: 1,
-        borderBottomColor: '#dadada',
+        borderBottomColor: themeColors.borderColor,
         paddingBottom:5,
     },
     headerText:{
         fontSize:25,
         fontWeight:"bold",
-        color:"#606060"
+        color: themeColors.secondaryText,
     }
 })
